@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<br>
+<a style="font-family: 'Times New Roman', Times, serif;font-size:20px;color: orange;" [routerLink] ="'/adminmodule'">Go Back to HomePage</a>
+
+
+<mat-card  style="margin:125px;">
+        <mat-card-title style="font-family: 'Times New Roman', Times, serif;color: rgb(240, 150, 16);"> ADD QUESTIONS </mat-card-title>
+    <input style="border-bottom-color:rgb(240, 150, 16);"placeholder="Enter Question" [(ngModel)] = "question.questionContent" >
+    <br>
+    <br>
+    <br>
+    <button style="background-color:rgb(240, 150, 16); ;font-family:'Times New Roman', Times, serif;" class="btn-large" (click) ="save()">
+        <label style="color: white;font-family: 'Times New Roman', Times, serif;font-size: medium;">Save</label>
+    </button>
+
+    <button style="background-color:rgb(240, 150, 16); ;font-family:'Times New Roman', Times, serif;margin-left: 30px;"class="btn-large"> <a style="font-size: large;font-family: 'Times New Roman', Times, serif;color: white ;" class="nav-link" routerLink="/addquestion/options" routerLinkActive="active">
+        Add Options</a> </button>
+    
+</mat-card>
+<router-outlet></router-outlet>
+

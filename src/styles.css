@@ -1,0 +1,30 @@
+input.ng-invalid.ng-dirty{
+    border-bottom-color: red;
+    box-shadow: 0 1px 0 0 red;
+
+}
+
+ul.answer li:hover{
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+}
+
+.Orange
+{
+ background-color: rgb(240, 150, 16);
+}
+
+.btn-large btn-submit2{
+    align-items: flex-start;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 15px;
+    gap: normal;
+    letter-spacing: 0.5px;
+    line-height: 54px;
+    padding: 0px 28px;
+    text-align: center;
+    text-transform: uppercase;
+}
+

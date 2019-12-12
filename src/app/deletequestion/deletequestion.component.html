@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<br>
+<a style="font-family: 'Times New Roman', Times, serif;font-size:20px;color: orange;" [routerLink] ="'/adminmodule'">Go Back to HomePage</a>
+
+<mat-card  style="margin:125px;">
+        <mat-card-title style="font-family: 'Times New Roman', Times, serif;color: rgb(240, 150, 16);"> SEARCH QUESTIONS </mat-card-title>
+
+        <input style="border-bottom-color:rgb(240, 150, 16);" placeholder="Enter Question" [(ngModel)]="criterion"/>
+    <br>
+    <br>
+
+
+<button style="background-color:white ;font-family:'Times New Roman', Times, serif;" class="btn-large" (click)="search()"><label>Search</label></button>
+
+<div *ngFor="let question of questionList">
+    <p style="font-family: 'Times New Roman', Times, serif;color:rgb(240, 150, 16);">SEARCH RESULT : </p>
+
+        <p style="font-family: 'Times New Roman', Times, serif;color:rgb(240, 150, 16);">{{ update.questionContent }}</p>
+
+    </div>
+    <br>
+    <br>
+    
+        <mat-card-title style="font-family: 'Times New Roman', Times, serif;color: rgb(240, 150, 16);"> DELETE QUESTION </mat-card-title>
+    <input style="border-bottom-color:rgb(240, 150, 16);"placeholder="Enter Question to delete" [(ngModel)] = "question.questionContent" >
+    <br>
+    <br>
+ 
+    <button style="background-color:white ;font-family:'Times New Roman', Times, serif;" class="btn-large" (click) ="save()">
+        <label>DELETE</label>
+    </button>
+
+
+</mat-card>
+
+

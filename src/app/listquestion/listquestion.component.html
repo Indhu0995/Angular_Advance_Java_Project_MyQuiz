@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+
+<br>
+<a style="font-family: 'Times New Roman', Times, serif;font-size:20px;color: rgb(240, 150, 16);;" [routerLink] ="'/adminmodule'">Go Back to HomePage</a>
+<mat-card style="margin: 125px;">
+        <mat-card-title style="font-family: 'Times New Roman', Times, serif;color: rgb(240, 150, 16);">  QUESTIONS List</mat-card-title>
+      <br>
+
+
+<button style="background-color:rgb(240, 150, 16); ;font-family:'Times New Roman', Times, serif;" class="btn-large" (click)="allQuestions()"><label style="color: white;font-family: 'Times New Roman', Times, serif;font-size: medium;">Search</label></button>    
+
+<table>
+<tr *ngFor="let question of questions">
+
+       <td> <p style="font-family: 'Times New Roman', Times, serif;color:rgb(240, 150, 16);font-family: 'Times New Roman', Times, serif;font-size: large;">{{ question.questionContent }}</p> </td>
+    <td>  <button style="background-color: rgb(240, 150, 16);color: white;font-family:'Times New Roman', Times, serif;" class="btn-large"  (click)="deleteQuestion(question.id)"><label style="color: white;font-family: 'Times New Roman', Times, serif;font-size: small;">Delete</label></button></td>
+         
+</tr>
+
+
+            </table>
+
+           
+

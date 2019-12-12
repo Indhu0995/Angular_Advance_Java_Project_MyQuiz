@@ -1,0 +1,22 @@
+
+<nav class= "Orange">
+    <div class="nav-wrapper">
+        <a style="font-family: 'Times New Roman', Times, serif;" [routerLink] ="''" class="brand-logo center"> MyQuiz</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+                <a style="font-family: 'Times New Roman', Times, serif;font-size:20px;" [routerLink] ="''">Logout</a>
+            </li>
+        </ul>   
+    
+        <button class=mat mat-button [matMenuTriggerFor]="menu"><h6 style="font-family: 'Times New Roman', Times, serif;">Menu</h6></button>
+            <mat-menu #menu="matMenu">
+                 <button mat-menu-item><a style="font-family: 'Times New Roman', Times, serif;font-size:20px;color:rgb(240, 150, 16);" [routerLink] ="'/addquestion'">Add Question</a></button>
+                 <button mat-menu-item><a style="font-family: 'Times New Roman', Times, serif;font-size:20px;color:rgb(240, 150, 16);" [routerLink] ="'/searchquestion'">Search Question</a></button>
+                 <button mat-menu-item><a style="font-family: 'Times New Roman', Times, serif;font-size:20px;color:rgb(240, 150, 16);" [routerLink] ="'/updatequestion'">Update Question</a></button>
+                 <button mat-menu-item><a style="font-family: 'Times New Roman', Times, serif;font-size:20px;color:rgb(240, 150, 16);" [routerLink] ="'/deletequestion'">Delete Question</a></button>
+                 
+            </mat-menu>
+            <button style="background-color: rgb(240, 150, 16);font-family: 'Times New Roman', Times, serif;" class=" btn-submit"type="submit" ><a style="color: white;" [routerLink]="'/quiz'">Start Quiz</a>
+            </button>
+        </div>       
+</nav>

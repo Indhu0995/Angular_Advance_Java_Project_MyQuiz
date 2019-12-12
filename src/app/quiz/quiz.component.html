@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+
+<br>
+
+<mat-card style="margin: 100px;margin-left: 500px;margin-right: 500px;">
+ 
+  
+  <br>
+
+
+<button style="background-color:rgb(240, 150, 16) ;font-family:'Times New Roman', Times, serif;margin-left: 115px;" class="btn-large" (click)=" prepareQuiz()"><label style="color: white;font-family: 'Times New Roman', Times, serif;font-size: medium;">Start Quiz</label></button>    
+
+
+<div *ngFor="let question of questions">
+
+   <p style="font-family: 'Times New Roman', Times, serif;color:rgb(240, 150, 16);font-family: 'Times New Roman', Times, serif;font-size: large;">{{ question.questionContent }}</p> 
+
+     
+
+<mat-radio-group aria-label="Select an option">
+  <mat-radio-button style="font-family: 'Times New Roman', Times, serif;font-size: medium;color: rgb(240, 150, 16);" value="1">ResultSet</mat-radio-button><br>
+  <mat-radio-button style="font-family: 'Times New Roman', Times, serif;font-size: medium;color: rgb(240, 150, 16);" value="2">RowMapper</mat-radio-button><br>
+  <mat-radio-button style="font-family: 'Times New Roman', Times, serif;font-size: medium;color: rgb(240, 150, 16);" value="1">RowSetMapper</mat-radio-button><br>
+  <mat-radio-button style="font-family: 'Times New Roman', Times, serif;font-size: medium;color: rgb(240, 150, 16);" value="2">ResultSetMapper</mat-radio-button>
+</mat-radio-group>
+
+<br>
+<br>
+<br>  
+<button style="background-color:rgb(14, 109, 14) ;font-family:'Times New Roman', Times, serif;margin-left: 115px;" class="btn-large" (click)=" prepareQuiz()"><a style="color: white;" [routerLink]="'/result'"><label style="color: white;font-family: 'Times New Roman', Times, serif;font-size: medium;">Submit</label></a></button>
+
+
+</div>
+
+
+          </mat-card>
+           
+

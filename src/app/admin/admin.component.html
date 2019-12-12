@@ -1,0 +1,49 @@
+
+<div class="row">
+    <div class="col s6 offset-s3">
+        <div class="card">
+            <div class="col s6">
+            <h2 style="font-family: 'Times New Roman', Times, serif;">Admin Login</h2>
+            </div>
+            <div class="col s6">
+                <img src="/assets/img/admin.jpg" style="width:250px;height: 250px;"class="offset-s3">
+
+            </div>
+            <div class="card-content">
+                <form #registerForm="ngForm">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input type="text" name="Name" #Name ngModel required>
+                        <label style="font-family: 'Times New Roman', Times, serif;">Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">email</i>
+                            <input type="email" name="Email" #Email ngModel required [pattern]="emailpattern">
+                            <label style="font-family: 'Times New Roman', Times, serif;">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">https</i>
+                            <input type="password" name="password" #Password ngModel required>
+                            <label style="font-family: 'Times New Roman', Times, serif;">Password</label>
+                        </div>
+                    </div>
+                    <div >
+                        
+                            <button style="background-color: rgb(240, 150, 16);font-family: 'Times New Roman', Times, serif;" class="btn-large btn-submit"type="submit" [disabled]="!registerForm.valid"><a style="color: white;" [routerLink]="'/adminmodule'">Start</a>
+                            </button>
+                          
+                    </div>
+                    <div >
+                    <button style= "background-color: rgb(240, 150, 16);font-family:'Times New Roman', Times, serif;margin-left: 310px;"class="btn-large btn-submit2"type="submit" ><a style="color: white;" [routerLink]="'/register'"> Go to Student Portal</a></button>
+                </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

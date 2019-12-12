@@ -1,0 +1,78 @@
+<!--<h1>{{ username }}</h1>
+
+
+
+<h1>Enter Option 1</h1>
+
+<input type="hidden" name="option.questionRef" [value]="100" [(ngModel)] = "option.questionRef" />
+
+<input [(ngModel)] = "option.choice" >
+
+<div class="custom-control custom-radio">
+  <input type="radio" class="custom-control-input" id="correct" name="option.valid" [value]="true" [(ngModel)] = "option.valid">
+  <label class="custom-control-label" for="correct">Correct</label>
+</div>
+
+
+<div class="custom-control custom-radio">
+  <input type="radio" class="custom-control-input" id="wrong" name="option.choice" [value]="false" [(ngModel)] = "option.valid">
+  <label class="custom-control-label" for="wrong">Wrong</label>
+</div>
+<button class="btn btn-success" (click)="saveoption()"><label>Save</label></button>-->
+
+
+<!--<form style="width: 500px;"  #form="ngForm" (submit)="onSubmit(form)">
+    
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          
+            </div>
+  
+  
+            <input type="text" class="form-control" id="choice"
+         required placeholder="Enter Option"
+         [(ngModel)]="option.choice" name="choice">
+         <br>
+  
+            
+           <div class="custom-control custom-radio">
+              <input style="margin-left: 50px;" type="radio" class="custom-control-input"  id="correct" name="valid" [value]="true" [(ngModel)] = "option.valid">
+              <label class="custom-control-label" for="correct">Correct</label>
+            </div>
+            <br>
+            
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input"  id="wrong" name="valid" [value]="false" [(ngModel)] = "option.valid">
+              <label class="custom-control-label" for="wrong">Wrong</label>
+            </div>
+          </div>
+    </div><br>
+    <div class="form-group">
+      <button style="background-color: rgb(6, 114, 6);;" type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>
+     
+    </div>
+  </form>-->
+<mat-card style="margin: 125px;">
+  <form  #form="ngForm" (submit)="onSubmit(form)">
+  <div class="example-container">
+      
+     
+      <mat-form-field style="font-family: 'Times New Roman', Times, serif;font-size: medium;">
+        <textarea style="font-family: 'Times New Roman', Times, serif;font-size: medium;" name="mcqChoice" matInput placeholder="Enter Options"[(ngModel)] = "option.mcqChoice"></textarea>
+      </mat-form-field>
+      <br>
+    
+      <mat-form-field style="font-family: 'Times New Roman', Times, serif;font-size: medium;">
+        <mat-select  placeholder="Select">
+          <mat-option style="font-family: 'Times New Roman', Times, serif;font-size: small;" ngDefaultControl  name="valid" [value]="true" [(ngModel)] = "option.valid">TRUE</mat-option>
+          <mat-option style="font-family: 'Times New Roman', Times, serif;font-size: small;" ngDefaultControl  name="valid" [value]="false" [(ngModel)] = "option.valid">FALSE</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
+      
+    </div>
+    <button style="background-color:rgb(9, 141, 9);font-family:'Times New Roman', Times, serif;"   class="btn-small"> <i class="fa fa-database"></i>
+        <label style="color: white;font-family: 'Times New Roman', Times, serif;font-size: medium;">SUBMIT</label></button>
+      </form>
+  </mat-card>
